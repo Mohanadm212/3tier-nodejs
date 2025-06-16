@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  namespace: nti-project
+spec:
+  type: ClusterIP
+  selector:
+    app: backend
+  ports:
+    - port: 3001
+      targetPort: 3001
+

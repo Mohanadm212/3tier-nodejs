@@ -1,0 +1,17 @@
+replicaCount: 2
+
+image:
+  repository: 359329123577.dkr.ecr.us-east-1.amazonaws.com/nti-app
+  tag: frontend
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+
+env:
+  - name: REACT_APP_API_URL
+    value: "/api"
+
+resources: {}
+
