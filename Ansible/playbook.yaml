@@ -1,0 +1,24 @@
+- name: Configure all EC2 instances
+  hosts: all
+  become: yes
+  roles:
+    - cloudwatch
+
+- name: Install and configure Jenkins
+  hosts: jenkins
+  become: yes
+  roles:
+    - jenkins
+
+- name: Install and configure SonarQube
+  hosts: sonarqube
+  become: yes
+  ignore_unreachable: yes
+  roles:
+    - sonarqube
+
+- name: Install and configure Prometheus & Grafana
+  hosts: monitoring
+  become: yes
+  roles:
+    - monitoring

@@ -1,0 +1,19 @@
+- name: Install Jenkins
+  hosts: jenkins
+  roles:
+    - jenkins
+
+- name: Install SonarQube
+  hosts: sonarqube
+  roles:
+    - sonarqube
+
+- name: Install CloudWatch Agent on All EC2
+  hosts: all
+  roles:
+    - cloudwatch
+
+- name: Install Prometheus on Monitoring EC2
+  hosts: prometheus
+  roles:
+    - prometheus

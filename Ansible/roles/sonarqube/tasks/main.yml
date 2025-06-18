@@ -1,0 +1,11 @@
+- name: Copy SonarQube install script
+  copy:
+    src: files/sonarqube_setup.sh
+    dest: /tmp/sonarqube_setup.sh
+    mode: '0755'
+
+- name: Run SonarQube install script in background (handles reboot)
+  shell: /tmp/sonarqube_setup.sh
+  async: 1800         # Allow up to 30 minutes for the job
+  poll: 0             # Don't wait, run asynchronously
+  ignore_errors: yes  # Don't fail when connection drops due to reboot
