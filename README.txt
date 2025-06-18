@@ -185,7 +185,4 @@ This document provides a comprehensive, step-by-step overview of the NTI  Final 
 
 ---
 
-## Author
-**Mohanad Mahmoud**  
-DevOps Engineer  
-June 2025
+
