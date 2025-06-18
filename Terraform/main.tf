@@ -107,7 +107,7 @@ resource "aws_db_instance" "mydb" {
 # EC2 Key Pair
 resource "aws_key_pair" "nti_key" {
   key_name   = "nti-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDClBVNQBycjAXuygQPnQNX/NBQfdOdyEz0kMpzWU61orQ/J8njg4B2xud46EAkw3WXVPGlg2IJ/RxLJGhHPeWfLsanVOp0a3HK12PmMiOdc2YnBRaYpK50zk29SIFPwSFBrdALoDh6IYBSlcI18UmBzBObErXoo64qfUDiaGbIQGM1FSvVXuko72ncu3JkNTun8ZZaycbrLUJ7k6yynibDFqrClgt9bg/3cOJqAZzBM11fTJtvJMAblA2WCr7CJYxI1hHjCnRo3OyEvC+8MUQZsMxTZlQO38765wP5KJ3nGtTI3H7wEG7k04kzlR7yQFK1o9MM3zqMJFdDuSrFPcCJ"
+  public_key = ""
 }
 
 # Global EC2 Security Group
